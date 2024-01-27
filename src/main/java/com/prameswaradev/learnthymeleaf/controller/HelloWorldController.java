@@ -10,18 +10,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.UUID;
 
 @Controller
-@RequestMapping("/")
 public class HelloWorldController {
 
-    @GetMapping
+    @GetMapping("/")
     public String getHello(Model model){
 //        variable expressions
         model.addAttribute("msg", "Hello World!");
         model.addAttribute("user", new User(UUID.randomUUID(), "Andhika", "Jakarta"));
-
+        model.addAttribute("id", UUID.randomUUID());
 
         return "hello";
     }
 
+    @GetMapping("/welcome")
+    public String goToWelcome(){
+        return "welcome";
+    }
 
 }

@@ -17,6 +17,9 @@
         <h3>Name: <span th:text="*{name}"></span></h3>
         <h3>City: <span th:text="*{city}"></span></h3>
     </div>
+    <br>
+    <a th:href="@{/welcome}"> welcome page </a>
+    <a th:href="@{hello/{id}(id=${id})"> welcome page with param</a>
 </center>
 </body>
 </html>
