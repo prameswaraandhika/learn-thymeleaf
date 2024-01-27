@@ -1,0 +1,14 @@
+Five types of thymeleaf SE
+1. ${} -> variable expressions, help binds the data from the template context(model) on a controller into resulting
+          html(view). in html we can call attributeName was we define in variable model ui
+
+            @GetMapping
+              public String getHello(Model model){
+                  model.addAttribute("msg", "Hello World!");
+                  return "hello";
+              }
+
+            we can call msg using this way
+            ${msg}
+
+2.
