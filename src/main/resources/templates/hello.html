@@ -7,9 +7,16 @@
 <body>
 <center>
     <h2 th:text="${msg}"></h2> <br>
-    <h1>Information User Detail</h1>
-    <h3>Name: <span th:text="${user.name}"></span></h3>
-    <h3>City: <span th:text="${user.city}"></span></h3>
+    <div>
+    <h1>Information User Detail Use Variable Expressions</h1>
+        <h3>Name: <span th:text="${user.name}"></span></h3>
+        <h3>City: <span th:text="${user.city}"></span></h3>
+    </div>
+    <div th:object="${user}">
+    <h1>Information User Detail Use Selection Expressions</h1>
+        <h3>Name: <span th:text="*{name}"></span></h3>
+        <h3>City: <span th:text="*{city}"></span></h3>
+    </div>
 </center>
 </body>
 </html>

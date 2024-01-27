@@ -15,8 +15,13 @@ public class HelloWorldController {
 
     @GetMapping
     public String getHello(Model model){
+//        variable expressions
         model.addAttribute("msg", "Hello World!");
         model.addAttribute("user", new User(UUID.randomUUID(), "Andhika", "Jakarta"));
+
+
         return "hello";
     }
+
+
 }
