@@ -27,4 +27,8 @@ public class HelloWorldController {
         return "welcome";
     }
 
+    @GetMapping("/fragment")
+    public String fragmentExpression(){
+        return "fragment";
+    }
 }
