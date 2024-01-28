@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <p>1 = Admin, 2 = User</p><br>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.city}"></td>
+                <td th:text="${user.role}"></td>
+                <td>
+<!--                    1 means Admin, 2 mean User-->
+                    <a th:href="@{/update}" th:if="${user.role} == 1">Update</a>
+                    <a th:href="@{/update}" th:if="${user.role} == 1">Delete</a>
+                    <a th:href="@{/update}" th:unless="${user.role} == 1">View</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
