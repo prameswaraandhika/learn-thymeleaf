@@ -9,6 +9,9 @@ public class User {
 
     private Integer role;
 
+    public User() {
+    }
+
     public User(UUID id, String name, String city) {
         this.id = id;
         this.name = name;
@@ -53,4 +56,6 @@ public class User {
     public void setRole(Integer role) {
         this.role = role;
     }
+
+
 }
