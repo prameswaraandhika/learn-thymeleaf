@@ -43,4 +43,11 @@ public class HelloWorldController {
         model.addAttribute("users", users);
         return "table_user";
     }
+    
+    @GetMapping(value = "/switch_example")
+    public String getValuesSwitch(Model model){
+        model.addAttribute("user",  new User(UUID.randomUUID(), "Andhika", "Jakarta", 1));
+        return "switch_example";
+    }
+    
 }
